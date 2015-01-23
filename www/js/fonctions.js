@@ -604,7 +604,7 @@ $(document).ready(function(){
 						if(total_week_v>0){
 							taux_rebond = total_rebond / total_week_v * 100;
 							temps_moyen = Math.round(temps_total / total_week_v);
-							temps_moyen = parseInt(temps_moyen/60) + ':' + temps_moyen%60 + '';
+							temps_moyen = (parseInt(temps_moyen/60)<10?'0'+parseInt(temps_moyen/60):parseInt(temps_moyen/60)) + ':' + (parseInt(temps_moyen%60)<10?'0'+temps_moyen%60:temps_moyen%60) + '';
 						}
 						
 						var data = {

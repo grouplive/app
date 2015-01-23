@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Grouplive</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+<link rel="stylesheet" href="css/jquery.mobile-1.4.4.min.css" />
+<link rel="stylesheet" href="css/styles.css" />
+<script src="js/jquery-1.11.1.min.js"></script>
+<script>
+$(document).ready(function () {
+  $(window).attr('location', 'index.html');		
+});
+</script>
+</head>
+
+<body>
+<div data-role="page" id="page-contact">
+
+  <div data-role="header" data-theme="b" class="ui-header-fixed">
+      <h1>Contact</h1> <a href="#" data-rel="back" class="ui-btn ui-shadow ui-corner-all ui-icon-back ui-btn-icon-notext ui-btn-inline">Retour</a>
+    <div class="publier-tabs">
+    </div>
+  </div>
+  
+  <div role="main" class="ui-content ui-page-header-fixed">
+    
+
+        <form id="form-contact" data-ajax="true" class="form-contact">
+            <input type="text" name="nom" id="nom" value="" data-clear-btn="true" placeholder="Nom">
+            <textarea name="message" id="message" placeholder="Votre message" ></textarea>
+            <input type="submit" name="publier" id="publier" value="Envoyer">
+		</form>
+
+    	<div class="blockTel">
+        	<a href="tel:+33297632464"><img src="./imgs/btn_tel.png"></a><br />
+            <span class="tel">02 97 69 24 64</span>
+        </div>
+        
+    <div data-role="popup" id="popupError4" data-overlay-theme="b" data-theme="b" data-dismissible="true" class="popup-error">
+        <!--<a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right">Fermer</a>-->
+        <div data-role="header" data-theme="a">
+            <h1>Erreur !</h1>
+        </div>
+        <div role="main" class="ui-content">
+            <p>Identifiants incorrects.</p>
+        </div>
+    </div>
+    
+  </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,122 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Grouplive</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+<link rel="stylesheet" href="css/jquery.mobile-1.4.4.min.css" />
+<link rel="stylesheet" href="css/styles.css" />
+<script src="js/jquery-1.11.1.min.js"></script>
+<script>
+$(document).ready(function () {
+  $(window).attr('location', 'index.html');		
+});
+</script>
+</head>
+
+<body>
+<div data-role="page" id="page-stats">
+  <div data-role="header" data-theme="b" class="ui-header-fixed">
+      <h1>Statistiques</h1> <a href="#" data-rel="back" class="ui-btn ui-shadow ui-corner-all ui-icon-back ui-btn-icon-notext ui-btn-inline">Retour</a>
+    <div class="stats-tabs sstabs">
+      <div data-role="navbar">
+        <ul>
+          <li><a href="" class="ui-btn-active recent">Récent</a></li>
+          <li><a href="" class="archives">Archives</a></li>
+          <li><a href="" class="localisation">Localisation</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div role="main" class="ui-content ui-page-header-fixed">
+    
+    <div class="onglet onglet-1">
+        <div id="graph1" class="graph">
+        	<div class="titre"><div>7</div> <span>derniers jours</span></div>
+            <div class="graph-container"><canvas id="myChart" width="400" height="300"></canvas></div>
+            <div class="legend"></div>
+        </div>
+        <div class="stats-nombres">
+        	<div class="visiteurs"><div class="nb">-</div><div class="texte">visiteurs</div></div>
+        	<div class="pages-vues"><div class="nb">-</div><div class="texte">pages vues</div></div>
+            <div class="clear"></div>
+        	<div class="taux-rebond"><div class="nb">-</div><div class="texte">taux de rebond</div></div>
+        	<div class="temps-moyen"><div class="nb">-</div><div class="texte">temps moyen</div></div>
+            <div class="clear"></div>
+        </div>
+        <div class="tableau-donnees">
+        	<table cellpadding="0" cellspacing="0" border="0">
+            	<thead>
+                	<tr>
+                    	<th class="jour">Jours</th>
+                    	<th>Visiteurs</th>
+                    	<th>Pages vues</th>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="onglet onglet-2">
+        <div id="graph2" class="graph">
+            <div class="graph-container"><canvas id="myChart2" width="400" height="300"></canvas></div>
+            <div class="legend"></div>
+        </div>
+        <div class="tableau-donnees">
+        	<table cellpadding="0" cellspacing="0" border="0">
+            	<thead>
+                	<tr>
+                    	<th class="jour">Mois</th>
+                    	<th>Visiteurs</th>
+                    	<th>Pages vues</th>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="onglet onglet-3">
+        <div class="tableau-donnees">
+        	<div class="legende">Statistiques sur les 30 derniers jours</div>
+        	<table cellpadding="0" cellspacing="0" border="0" class="city">
+            	<thead>
+                	<tr>
+                    	<th class="jour">Villes</th>
+                    	<th>Visiteurs</th>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+        	<table cellpadding="0" cellspacing="0" border="0" class="source">
+            	<thead>
+                	<tr>
+                    	<th class="jour">Provenance</th>
+                    	<th>Visiteurs</th>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    
+        
+    <div data-role="popup" id="popupError2" data-overlay-theme="b" data-theme="b" data-dismissible="true" class="popup-error">
+        <!--<a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right">Fermer</a>-->
+        <div data-role="header" data-theme="a">
+            <h1>Erreur !</h1>
+        </div>
+        <div role="main" class="ui-content">
+            <p>Identifiants incorrects.</p>
+        </div>
+    </div>
+    
+  </div>
+</div>
+
+</body>
+</html>
